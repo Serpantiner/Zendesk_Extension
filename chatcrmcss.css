@@ -1,0 +1,687 @@
+
+
+
+
+
+
+.modal-dialog.modal-card-preview .modal-content .modal-body { width: 100%; }
+
+/* Settings Modal (background) */
+.settingsModalcss {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9000; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 30%;
+  top: 8%;
+  width: 40%; /* Full width */
+  height: 90%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+  
+  color: white;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  border-radius: 25px;
+}
+.settingsModalcss::-webkit-scrollbar {
+  display: none;
+}
+
+/* Settings Modal Content */
+.modal-content-css-setchat {
+  background-color: #1c1c1c;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 25px;
+  width: 80%;
+}
+
+/* Settings Modal Close Button */
+.settingchatver {
+  color: #b8008d;
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.closesettings {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border: 2px solid #991DAB;
+  border-radius: 10px;
+}
+
+.closesettings:hover,
+.closesettings:focus {
+  color: #42d117;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Switch style settings */
+.setswitchcheckbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9003;
+}
+
+.button-cover-big {
+  height: 100px;
+  margin: 20px;
+  box-shadow: 0 10px 20px -8px #c5d6d6;
+  border-radius: 4px;
+  background-color: #595151;
+}
+
+.button-cover-big:before {
+  counter-increment: button-counter;
+  content: counter(button-counter);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #d7e3e3;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px;
+  opacity: 0;
+}
+
+.button-cover-big,
+.knobs-big,
+.layer-big {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.setswitchbutton {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  /* margin: -20px auto 0 auto; */
+  overflow: hidden;
+}
+
+.setswitchbutton.r,
+.setswitchbutton.r .layer-big {
+  border-radius: 100px;
+}
+
+.setswitchbutton.b2 {
+  border-radius: 2px;
+}
+
+.switch-settings-div-style .knobs-big:before,
+.switch-settings-div-style .knobs-big:after,
+.switch-settings-div-style .knobs-big span {
+  position: absolute;
+  top: 4px;
+  width: 20px;
+  height: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0.5;
+  padding: 9px 4px;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+
+.switch-settings-div-style .knobs-big:before {
+  content: '-';
+  color: #fff;
+  left: 3px;
+  line-height: 0.15;
+}
+
+.switch-settings-div-style .knobs-big:after {
+  content: '+';
+  left: 42px;
+  color: #fff;
+  background-color: #2be453;
+  opacity: 0;
+}
+
+.switch-settings-div-style .knobs-big:before,
+.switch-settings-div-style .knobs-big:after {
+  z-index: 9002;
+}
+
+.switch-settings-div-style .knobs-big span {
+  left: 4px;
+  background-color: #b34a4a;
+  z-index: 9001;
+}
+
+.switch-settings-div-style .setswitchcheckbox:checked+.knobs-big:before {
+  opacity: 0;
+}
+
+.switch-settings-div-style .setswitchcheckbox:checked+.knobs-big:after {
+  opacity: 1;
+}
+
+.switch-settings-div-style .setswitchcheckbox:checked+.knobs-big span {
+  background-color: #686868;
+  transform: scale(4);
+}
+
+/* Mini-Switch style settings */
+.setswitchcheckboxmini {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+input.setswitchcheckboxmini[type="checkbox"] {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.button-cover-mini {
+  height: 50px;
+  margin: 10px;
+  box-shadow: 0 10px 20px -8px #c5d6d6;
+  border-radius: 4px;
+  background-color: #595151;
+}
+
+.button-cover-mini:before {
+  counter-increment: button-counter;
+  content: counter(button-counter);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #d7e3e3;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px;
+  opacity: 0;
+}
+
+.button-cover-mini,
+.knobs-mini,
+.layer-mini {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.setswitchbutton-mini {
+  position: relative;
+  top: 50%;
+  width: 37px;
+  height: 18px;
+  /* margin: -20px auto 0 auto; */
+  overflow: hidden;
+}
+
+.setswitchbutton-mini.r,
+.setswitchbutton-mini.r .layer-mini {
+  border-radius: 50px;
+}
+
+.setswitchbutton-mini.b2 {
+  border-radius: 1px;
+}
+
+.switch-settings-div-style-mini .knobs-mini:before,
+.switch-settings-div-style-mini .knobs-mini:after,
+.switch-settings-div-style-mini .knobs-mini span {
+  position: absolute;
+  top: 12%;
+  width: 13px;
+  height: 13px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 2px;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+
+.switch-settings-div-style-mini .knobs-mini:before {
+  content: '';
+  color: #fff;
+}
+
+.switch-settings-div-style-mini .knobs-mini:after {
+  content: '';
+  left: 21px;
+  color: #fff;
+  background-color: #2be453;
+  opacity: 0;
+}
+
+.switch-settings-div-style-mini .knobs-mini:before,
+.switch-settings-div-style-mini .knobs-mini:after {
+  z-index: 2;
+}
+
+.switch-settings-div-style-mini .knobs-mini span {
+  background-color: #b34a4a;
+  left: 3px;
+  z-index: 1;
+}
+
+.switch-settings-div-style-mini .setswitchcheckboxmini:checked+.knobs-mini:before {
+  opacity: 0;
+}
+
+.switch-settings-div-style-mini .setswitchcheckboxmini:checked+.knobs-mini:after {
+  opacity: 1;
+}
+
+.switch-settings-div-style-mini .setswitchcheckboxmini:checked+.knobs-mini span {
+  background-color: #686868;
+  transform: scale(4);
+}
+
+
+/* Table mafic */
+.settingsModalcss .tg {
+  border-collapse: collapse;
+  border-color: black;
+  border-spacing: 0;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+}
+
+.settingsModalcss .tg td {
+  border-style: solid;
+  border-width: 0px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.settingsModalcss .tg th {
+  border-style: solid;
+  border-width: 0px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.settingsModalcss .tg .tg-c3ow {
+  border-color: inherit;
+  text-align: center;
+  vertical-align: center;
+}
+
+.settingsModalcss .tg .tg-lqy6 {
+  text-align: right;
+  vertical-align: center;
+}
+
+.settingsModalcss .tg .tg-0lax {
+  text-align: left;
+  vertical-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .settingsModalcss .tg {
+    width: auto !important;
+  }
+
+  .settingsModalcss .tg col {
+    width: auto !important;
+  }
+
+  .settingsModalcss .tg-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ToolTip */
+.settingsModalcss .hasTooltip span {
+    display: none;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.settingsModalcss .hasTooltip:hover span {
+    display: block;
+    position: absolute;
+    border: 1px solid #CCC;
+    z-index: 9010;
+}
+
+.settingsModalcss a:visited {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+.unlockScreenBlockersStyle {
+	z-index: 2147483601;
+	position: fixed;
+	top: 0; left: 0;
+	font-size: 1rem;
+}
+
+
+/* Design switch */
+.radio1des,
+.radio2des,
+.radio3des {
+  position: absolute;
+  left: -9999px;
+}
+
+.sliderContainer {
+  height: 2em;
+  width: 2em;
+  position: relative;
+  display: inline-block;
+}
+
+.label1des,
+.label2des,
+.label3des {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0, 0, 0, 0);
+}
+
+.radio1des:checked ~ span .label1des,
+.radio1des:checked ~ span .label3des,
+.radio2des:checked ~ span .label1des,
+.radio2des:checked ~ span .label2des,
+.radio3des:checked ~ span .label2des,
+.radio3des:checked ~ span .label3des {
+  position: absolute;
+  left: -9999px;
+}
+
+.slider {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  display: inline-block;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.radio1des:checked ~ .sliderContainer .slider::before {
+  font-size: 1.5em;
+  content: "☀️";
+}
+
+.radio2des:checked ~ .sliderContainer .slider::before {
+  font-size: 1.5em;
+  content: "🔆";
+}
+
+.radio3des:checked ~ .sliderContainer .slider::before {
+  font-size: 1.5em;
+  content: "🌙";
+}
+
+.panel-center {
+	transition: margin-right 0s ease-out 0s !important;
+}
+
+/* Remove animation*/
+.panel-right.animate-show.ng-hide-add {
+transition: right 0s ease-out 0s !important;
+}
+
+.panel-right.animate-show.ng-hide-remove {
+transition: right 0s ease-out 0s !important;
+}
+
+body { transition: background-color 1s; }
+.content-header { transition: background 1s; }
+.content-helper { transition: background 1s; }
+.right-sidebar { transition: background 1s; }
+.btn.btn-brand-white { transition: background-color 1s; }
+.panel-left { transition: background-color 1s; }
+
+.chat-date-human { transition: background 1s; }
+.chat-date-human span { transition: background 1s; }
+.btn.btn-brand-alert { transition: background 1s; }
+.workspace-customerSearch .form-control { transition: background-color 1s; }
+.flex-chat-form-wrapper .chat-form > .input-group textarea { transition: background-color 1s; }
+.chat-date-human, .chat-delimiter, .chat-completed-component { transition: background 1s !important; }
+.chat-date-human span, .chat-delimiter span, .chat-completed-component span { transition: background 1s; }
+.profile-info .profile-info-content .profile-info-tabset .nav-tabs li a { transition: background 1s; }
+.profile-info .profile-info-content .profile-info-tabset .nav-tabs li.active a { transition: background 1s; }
+.content .entry.user-unread { transition: background-color 1s; }
+.content .entry.user { transition: background-color 1s; }
+.content .entry.bot { transition: background-color 1s; }
+/*
+.content-helper { transition: background 1s; transition: color 1s; }
+.form-control { transition: color 1s; }
+.dropdown-menu { transition: background-color 1s; }
+.workspace-customerSearch .dropdown-menu__item { transition: color 1s; }
+.dropdown-menu__item.ng-binding:hover { transition: background-color 1s; }
+.btn.btn-brand-white { transition: background-color 1s; transition: color 1s; }
+.chat-date-human { transition: background 1s; }
+.chat-date-human span, .chat-delimiter span, .chat-completed-component span { transition: background 1s; transition: color 1s; }
+.content .entry.user-unread { transition: background-color 1s; }
+.content .chat-message-sender { transition: color 1s; }
+.form-control { transition: background-color 1s; }
+.dropdown-menu > li > a { transition: color 1s; }
+.chat-form .chat-tools-area { transition: background-color 1s; }
+.chat-upload .drop-zone { transition: background-color 1s; }
+.notification-modal .modal-content { transition: background-color 1s; }
+.notification-modal { transition: background 1s; }
+.right-sidebar { transition: background 1s; }
+.profile-info .profile-info-content .profile-info-tabset .tab-content .profile-info-tab-content .profile-table .table-body .preview-content { transition: background 1s; }
+.profile-info .profile-info-content .profile-info-tabset .tab-content .profile-info-tab-content .profile-table .table-body .custom_select { transition: background 1s; transition: color 1s; }
+.profile-info .profile-info-content .profile-info-tabset .nav-tabs li a { transition: background 1s; transition: color 1s; }
+.profile-info .profile-info-content .profile-info-tabset .nav-tabs li.active a { transition: background 1s; transition: color 1s; }
+.profile-info .profile-info-content .profile-info-tabset .tab-content .profile-info-tab-content.family .profile-info-tab-l .profile-info-tab-i-name { transition: color 1s; }
+.profile-info .profile-info-content .profile-info-tabset .tab-content .profile-info-tab-content input { transition: background-color 1s; }
+.typeahead-custom .typeahead-custom-i { transition: background-color 1s; }
+.typeahead-custom .typeahead-custom-i:hover { transition: background 1s; }
+.loader-cover-area { transition: background-color 1s; }
+.btn.btn-brand-alert { transition: background 1s; }
+.btn.btn-brand-alert:hover, .btn.btn-brand-alert:focus { transition: background 1s; }
+.panel-left { transition: background-color 1s; }
+.btn.btn-brand-alert:hover, .btn.btn-brand-alert:active, .btn.btn-brand-alert:focus, .btn.btn-brand-alert:active:focus { transition: background-color 1s; }
+*/
+
+/* DABOOK Styles */
+/* Book Modal (background) */
+.greetnnotesModalcss {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 250; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 36%;
+  top: 8%;
+  width: 1105px; /* Full width */
+  height: 90%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+  color: white;
+  border-radius: 25px;
+}
+.greetnnotesModalcss::-webkit-scrollbar {
+  display: none;
+}
+
+/* Book Modal Content */
+.modal-content-css-greetnotes {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 25px;
+  width: 80%; /*Firefox backup*/
+  width: fit-content;
+}
+
+/* Book Modal Close Button */
+.greetnotesecselec {
+  color: #8a8a8a;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.greetnotesecselec:hover,
+.greetnotesecselec:focus {
+  color: #42d117;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Table magic */
+.greetnnotesModalcss * {
+  box-sizing: border-box;
+}
+
+.greetnnotesModalcss .row {
+  display: flex;
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.greetnnotesModalcss .column {
+  flex: 50%;
+  padding: 5px;
+}
+
+.greetnnotesModalcss table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid #ddd;
+}
+
+.greetnnotesModalcss th, td {
+  text-align: left;
+}
+
+.greetnnotesModalcss .smallbutonchik {
+  background: rgba(0,0,0,0);
+  font-size: 1.5rem;
+  vertical-align: top; 
+}
+
+.greetnnotesModalcss .nametextik {
+  display: block;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  padding-right: 5px;
+  padding-left: 3px;
+}
+
+.greetnnotesModalcss .notewithtext textarea {
+  /*max-width: 80px;*/
+  background: rgba(0,0,0,0);
+  color: #ffffff;
+}
+
+.greetnnotesModalcss .notewithtext {
+  max-width: 110px;
+}
+
+.greetnnotesModalcss .copybotinchik {
+  background: rgba(0,0,0,0);
+  font-size: 2.5rem;
+}
+
+.greetnnotesModalcss td {
+  white-space: nowrap;
+}
+
+.greetnnotesModalcss input[type='checkbox'] {
+	display: inline-block;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+
+.quickselectfornoteschat {
+	background: #34a8df;
+    background: -moz-linear-gradient(top, #34a8df 0%, #2899ce 90%, #2899ce 90%, #1c88bb 100%);
+    background: -webkit-linear-gradient(top, #34a8df 0%, #2899ce 90%, #2899ce 90%, #1c88bb 100%);
+    background: linear-gradient(to bottom, #34a8df 0%, #2899ce 90%, #2899ce 90%, #1c88bb 100%);
+    box-shadow: inset 0 -1px 3px rgb(0 0 0 / 35%);
+    color: #fff;
+    background-color: #2899ce;
+	border: none;
+}
+
+.quickselectfornoteschat:hover,
+.quickselectfornoteschat:focus {
+  background: violet;
+}
+
+.quickmenustyler table, th, tr, td {
+  padding: 0px;
+  margin: 0px;
+  border-spacing: 0;
+}
+
+.greetnnotesModalcss .hccnameclas {
+  background: #ffffff !important; 
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  max-width: 80px;
+  height: 20px;
+}

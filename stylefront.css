@@ -1,0 +1,171 @@
+:root {
+  --popup-width: 300px; /* Adjust width as needed */
+  --popup-height: 600px; /* Adjust height as needed */
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 30%; /* Set width to 30% */
+  text-align: center;
+  font-weight: bold; /* Make the text bold */
+}
+
+.active-tab {
+background-color: #ddd;
+}
+
+.tab-content {
+display: none;
+border: 1px solid #ccc;
+padding: 10px;
+margin-top: -1px;
+}
+
+.tab-content.active {
+display: block;
+}
+
+
+.button-container {
+  text-align: center; /* Center align the buttons */
+  padding: 10px 0;
+}
+
+.button {
+  width: 100%; /* Full width of the container */
+  margin: 5px 0; /* Spacing between buttons */
+ 
+}
+
+.recommend-title, .highlights-title {
+  text-align: center; /* Center the titles */
+  font-weight: bold;
+  color: white;
+  
+}
+body {
+  margin: 0;
+  overflow: hidden; /* Prevent scroll on body */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #848faf, #515b7e);
+}
+
+.main-container {
+  position: relative;
+  width: var(--popup-width);
+  height: var(--popup-height);
+  overflow-y: auto; /* Enable scroll on this container */
+  overflow-x: hidden;
+  background-image: linear-gradient(145deg, #7784b0, #384162); /* Match the gradient */
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.cryptos label {  /* Applies cahnges for text and the checkboxes */
+  display: block;
+  margin-bottom: 7.3px; /* 10px * 0.73 */
+  background-image: linear-gradient(145deg, #7784b0, #384162);
+  border-radius: 14.6px; /* 20px * 0.73 */
+  box-shadow: 4.38px 4.38px 8.76px rgba(0, 0, 0, 0.2); /* Adjusted proportionally */
+  color: white;
+  padding: 7.3px 14.6px; /* Adjusted proportionally */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 13.6px; /* 16px * 0.73 */
+  }
+
+  .cryptos label input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 7.3px; 
+  border: 1px solid #d3d3d3;
+  height: 14.6px; /* 20px * 0.73 */
+  width: 14.6px; /* 20px * 0.73 */
+  background-color: #f0f0f0;
+  border-radius: 2.92px; /* 4px * 0.73 */
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  }
+.cryptos label input[type="checkbox"]:checked {
+  background-color: #4d5b9e;
+  border: 1px solid #4d5b9e;
+}
+
+.cryptos label input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 4.38px; 
+  top: 1.46px; 
+  width: 4.38px; 
+  height: 8.76px; 
+  border: solid white;
+  border-width: 0 2.19px 2.19px 0; 
+  transform: rotate(45deg);
+  }
+
+.cryptos label:hover {
+  background-image: linear-gradient(145deg, #8896c5, #485882);
+}
+
+.button-container .button {
+  display: block; /* Stack buttons vertically */
+  width: 100%; /* Full width of the container */
+  margin-top: 10px; /* Space between buttons */
+  
+}
+#hcc-content label {
+  font-size: 12px; /* Increase the size as needed */
+}
+
+/* Smaller font size and adjusted layout for RX tab content labels */
+#rx-content .cryptos label {
+  position: relative; 
+  padding: 7.3px 30px 7.3px 30px; 
+}
+/*Doesnt seem to work for adjusting checkboxes in the RX tab ;( */
+#rx-content .cryptos label input[type="checkbox"] {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  left: 5px; 
+  margin: 0; 
+}
+#BillReviewButton {
+  background-color: #7784b0; /* Base gradient color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 14.6px; /* 20px * 0.73 to match other elements */
+  cursor: pointer;
+  font-size: 13.6px; /* 16px * 0.73 to match label font size */
+  box-shadow: 4.38px 4.38px 8.76px rgba(0, 0, 0, 0.2); /* Same shadow as labels */
+  transition: background-color 0.3s ease;
+  outline: none;
+  text-align: center; /* Center the text */
+  display: block; 
+  margin: 10px auto; /* Auto margins for horizontal centering */
+  width: calc(100% - 40px); /* Adjust width to allow for padding */
+}
+
+#BillReviewButton:hover {
+  background-image: linear-gradient(145deg, #8896c5, #485882); /* Hover gradient */
+}
+
+#BillReviewButton:active {
+  transform: translateY(2px); /* Push down on active */
+  background-color: #4d5b9e; /* Color when clicked */
+}

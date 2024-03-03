@@ -1,0 +1,4 @@
+#chromeContainer:not(.arcadeUser) #chromeHeader { position: relative !important; }
+.topHeaderContent { padding: none !important; }
+.filter-group > div:first-child { padding: none !important; }
+.searchResults .guidedSearchResultsFiltersRedesign .result, .searchResults .results .result { padding: 4px 0px !important; }

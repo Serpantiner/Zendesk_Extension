@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Popup</title>
+  <link rel="stylesheet" href="stylefront.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="cryptos">
+  </style>
+</head>
+<body>
+  <div>
+    <div class="tab" data-target="hcc-content">HCC <input type="checkbox" id="hcc-checkbox"></div>
+    <div class="tab" data-target="rx-content">RX <input type="checkbox" id="rx-checkbox"></div>
+    <div class="tab" data-target="br-content">BR <input type="checkbox" id="br-checkbox"></div>
+</div>
+<div id="hcc-content" class="tab-content">
+  <!-- Title "Why we recommend" -->
+  <p class="recommend-title">Why we recommend</p>
+
+  <label>
+    <select id="availabilityDropdown">
+      <option value="" disabled selected>Availability (click)</option>
+      <option value="early">Availability: early</option>
+      <option value="mid">Availability: mid</option>
+      <option value="late">Availability: late</option>
+    </select>
+  </label>
+
+  <label>
+    <input type="checkbox" id="proximityCheckbox">
+    Proximity
+  </label>
+  <label>
+    <input type="checkbox" id="inNetworkCheckbox">
+    In-network
+  </label>
+  <label>
+    <input type="checkbox" id="nearestAvailableCheckbox">
+    Nearest available option
+  </label>
+
+  <!-- Title "Public Provider Highlights" -->
+  <p class="highlights-title">Public Provider Highlights</p>
+
+  <label>
+    <input type="checkbox" id="inHouseLabCheckbox">
+    In-house lab
+  </label>
+  <label>
+    <input type="checkbox" id="patientRatingsCheckbox">
+    High-patient ratings
+  </label>
+  <label>
+    <input type="checkbox" id="yearsInPracticeCheckbox">
+    10+ years in practice
+  </label>
+  <label>
+    <input type="checkbox" id="onlineSchedulingCheckbox">
+    Online scheduling
+  </label>
+  <label>
+    <input type="checkbox" id="weekendEveningHoursCheckbox">
+    Weekend/Evening hours
+  </label>
+  <label>
+    <input type="checkbox" id="boardCertifiedCheckbox">
+    Board-Certified
+  </label>
+
+  <!-- Solid line after "Board-Certified" -->
+  <hr class="solid-line">
+
+  <!-- Add three checkboxes as italic -->
+  <label class="italic-checkbox">
+    <input type="checkbox" id="noTPSCheckbox">
+    No TPS
+  </label>
+  <label class="italic-checkbox">
+    <input type="checkbox" id="hoursVaryCheckbox">
+    Hours Vary
+  </label>
+  <label class="italic-checkbox">
+    <input type="checkbox" id="labDiscCheckbox">
+    Lab Disc
+  </label>
+
+  <!-- Solid line after "Lab Disc" -->
+  <hr class="solid-line">
+
+  <!-- Checkboxes for "PCP" and "Specialist" moved closer to the checkboxes -->
+  <label class="checkbox-label">
+    <input type="checkbox" id="pcpCheckbox" />
+    <strong>PCP Auto-coverage</strong>
+  </label>
+  <label class="checkbox-label">
+    <input type="checkbox" id="specialistCheckbox" />
+    <strong>Specialist Auto-coverage</strong>
+  </label>
+  <div class="button-container">
+  
+  <button id="highlightButton">Check for White Spaces</button>
+  <!-- Solid line after "Check for White Spaces" -->
+  <hr class="solid-line">
+  <!-- New Buttons from First HTML -->
+  <button id="highlight" class="button">Start the ticket preview</button>
+  <button id="stop" class="button">Stop</button>
+  <button id="right_click_toggle" class="button">Right Click Enabled</div>
+  </div>
+  <div id="rx-content" class="tab-content">
+    <!-- RX Content Here -->
+    <div id="options-container"></div>
+  </div>
+  <div id="br-content" class="tab-content">
+    <!-- Bill Review Content Here -->
+    <button id="BillReviewButton">Copy the Values</button>
+    <!-- Add more Bill Review content here as needed -->
+  </div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
