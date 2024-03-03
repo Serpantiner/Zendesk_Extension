@@ -1,6 +1,9 @@
 Extention that me and my colleague have created in order to improve some of the Zendesk functionality.
+
 https://youtu.be/PI4qzZWDUXk (Video of how it works)
+
 Functionality:
+
 Press the Icon of the extension and navigate from there ->
 Start the ticket preview is responsible for providing you with the preview of the tct, you can use it on any que you like. (Example - Critical. Press the button and it will begin the process, every processed tct will be highlighted in yellow.
 Stop button will terminate the process, and it will no longer process tcts preview.
